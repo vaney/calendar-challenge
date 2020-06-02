@@ -1,0 +1,47 @@
+@import "../event/event.component";
+
+app-calendar-day {
+  display: flex;
+
+  .time-line {
+    .time-slots {
+      list-style: none;
+      padding: 0 10px 0 0;
+      margin: 0;
+      text-align: right;
+
+      li {
+        white-space: nowrap;
+        line-height: 30px;
+        height: 30px;
+        color: rgb(150, 150, 150);
+
+        &:nth-child(odd) {
+          font-weight: bold;
+          color: rgb(100, 100, 100);
+        }
+
+        &:nth-child(even) {
+          font-size: .7em;
+        }
+
+        .time-postfix {
+          font-size: .7em;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+
+  .events {
+    width: 620px;
+    padding: 0 10px;
+    margin: 13px 0 10px;
+    background: rgb(230, 230, 230);
+    border-left: 1px solid rgb(200, 200, 200);
+
+    .events-layout {
+      position: relative;
+    }
+  }
+}

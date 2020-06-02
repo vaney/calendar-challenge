@@ -1,0 +1,19 @@
+<div class="time-line">
+  <ul class="time-slots">
+    <li *ngFor="let timeSlot of timeSlots">
+      {{ timeSlot.time }} <span *ngIf="timeSlot.postfix" class="time-postfix">{{ timeSlot.postfix }}</span>
+    </li>
+  </ul>
+</div>
+<div class="events">
+  <div class="events-layout">
+    <app-calendar-event
+      *ngFor="let event of events;"
+      [event]="event"
+      [style.top.px]="event.start"
+      [style.left.%]="event.left"
+      [style.width.%]="event.width"
+    ></app-calendar-event>
+  </div>
+</div>
+

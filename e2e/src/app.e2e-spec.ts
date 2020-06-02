@@ -8,9 +8,10 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display calendar', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('calendar-challenge app is running!');
+    const list = page.getCalendar();
+    expect(list.count()).toEqual(1);
   });
 
   afterEach(async () => {
