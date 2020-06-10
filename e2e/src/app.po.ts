@@ -8,4 +8,8 @@ export class AppPage {
   getCalendar(): ElementArrayFinder {
     return element.all(by.css('app-calendar')) as ElementArrayFinder;
   }
+
+  getEvents(): ElementArrayFinder {
+    return element.all(by.css('app-calendar-event')) as ElementArrayFinder;
+  }
 }
