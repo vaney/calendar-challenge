@@ -21,7 +21,7 @@ export class DayComponent {
     private ref: ChangeDetectorRef) {
 
     ref.detach();
-    dayEventsService.initLayout(700, 600);
+    dayEventsService.initLayout(720, 600);
     this.timeSlots = DayComponent.buildTimeSlots();
     this.eventsStoreService.events$.subscribe(this.layoutEvents.bind(this));
   }
