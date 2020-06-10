@@ -90,7 +90,8 @@ export class DayEventsService {
 
     // Set events that occur at the specific minute
     this.events.forEach((event) => {
-      for (let i = event.start; i <= event.end - 1; i++) {
+      const start = event.start >= 0 ? event.start : 0;
+      for (let i = start; i <= event.end - 1 && i < this.height; i++) {
         minutes[i].push(event.id);
       }
     });
